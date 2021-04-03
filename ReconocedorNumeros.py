@@ -1,11 +1,14 @@
 
-import Secuencia
+def reconocedor(img, string):
+    '''
+    DEVOLVEMOS LOS NÚMEROS DE LAS ÚLTIMAS POSICIONES
+    PENDIENTE MEJORAR MÉTODO ANTERIOR CON IMAGEN Y SU POSICIÓN
+    '''
 
-class ReconocedorNumeros(Secuencia.Secuencia):
-    def Reconocedor(imagen_prep, pos):
-        pass
-        
-    def __init__(self):
-        super(ReconocedorNumeros, self).__init__()
-        pass
-    
+    numbers = ""
+
+    for i in string[-9:]:
+        if i.isnumeric():
+            numbers = numbers + i
+    #print(numbers)
+    return numbers
