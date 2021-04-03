@@ -1,13 +1,14 @@
 import unittest
 import cv2
-from Crotalrecogniser import Crotalrecogniser
+import main
 
 class TestCrotalRecogniser(unittest.TestCase):
     def test_RecogniseCrotal(self):
-        crotal = cv2.imread("0000.tif")
-        recogniser = Crotalrecogniser()
-        result = recogniser.recognise(crotal)
-        self.assertEqual(result, "0288")  # El método assertEqual compara que el resultado obtenido y el esperado es el mismo
+        crotal = cv2.imread("./CrotalesDB/TestSamples/0073.tif")
+        recogniser = main
+        result = recogniser.prueba(crotal)
+        self.assertEqual(result, "6711")
+        # El método assertEqual compara que el resultado obtenido y el esperado es el mismo
 
 
 if __name__ == "__main__":
