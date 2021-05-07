@@ -10,10 +10,7 @@ if __name__ == "__main__":
     args = vars(ap.parse_args())
     path_image = args['image_crotal']
 
-
-    # llamamos imread()
     #imagen_in = cv2.imread("C:\EjemploAI\AIVA_2021-Crotales_GrupoH\TestSamples/0001.TIF")
     imagen_in = cv2.imread(path_image)
     crotal = NumCrotalLib.reconocedor_crotal(imagen_in)
     print("el numero de crotal es: ", crotal)
-    #return crotal
