@@ -1,4 +1,4 @@
-def get_number_data(dato):
+def __get_number_data__(dato):
     contador = 0
     numbers = ""
     for _, j in enumerate(dato[::-1]):
@@ -11,7 +11,7 @@ def get_number_data(dato):
     return numbers
 
 
-def get_number_str(dato):
+def __get_number_str__(dato):
     contador = 0
     numbers = ""
     for i in reversed(dato):
@@ -27,22 +27,15 @@ def get_number_str(dato):
 
 
 def reconocedor(string_org, string_umb, data_org, data_umb):
-    '''
-    DEVOLVEMOS LOS NÚMEROS DE LAS ÚLTIMAS POSICIONES
-    PENDIENTE MEJORAR MÉTODO ANTERIOR CON IMAGEN Y SU POSICIÓN
-    '''
 
-    numbers = get_number_data(data_umb)
+    numbers = __get_number_data__(data_umb)
     if len(numbers) < 4 or len(numbers) > 5:
-        numbers = get_number_data(data_org)
+        numbers = __get_number_data__(data_org)
 
     if len(numbers) < 4 or len(numbers) > 5:
-        numbers = get_number_str(string_umb)
+        numbers = __get_number_str__(string_umb)
 
     if len(numbers) < 4 or len(numbers) > 5:
-        numbers = get_number_str(string_org)
-
-    #print("el numero de crotal es: ", numbers)
-
+        numbers = __get_number_str__(string_org)
 
     return numbers
