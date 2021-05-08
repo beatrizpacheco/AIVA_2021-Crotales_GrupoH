@@ -10,7 +10,7 @@ import javax.swing.ImageIcon;
 public class Main {
     public static void main(String[] args) throws IOException {
         //Introducir la ruta global de la imagen del crotal
-        String image_crotal = new String("C:\\EjemploAI\\AIVA_2021-Crotales_GrupoH\\TestSamples/0001.TIF");
+        String image_crotal = new String("./CrotalesDB/TestSamples/0001.TIF");
         ProcessBuilder builder = new ProcessBuilder("python main.py --image_crotal ",image_crotal);
         Process process = builder.start();
 
