@@ -1,7 +1,7 @@
 import pytesseract
 from pytesseract import Output
 
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+#pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 def __get_data__(d):
     n_boxes =[]
