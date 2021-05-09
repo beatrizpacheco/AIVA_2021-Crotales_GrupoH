@@ -23,7 +23,7 @@ class MakeTests():
     def _procesar(self, file_name, groundtruth):
         print("./CrotalesDB/TestSamples/" + file_name)
         img = cv2.imread("./CrotalesDB/TestSamples/" + file_name)
-        result = self.recogniser.prueba(img)
+        result = self.recogniser.NumCrotalLib.reconocedor_crotal(img)
         self.test += 1
         if result == groundtruth:
             self.sucess +=1
