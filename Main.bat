@@ -1,1 +1,0 @@
-call "c:\Users\Usuario\anaconda3\Scripts\activate.bat" & cd "C:\EjemploAI\AIVA_2021-Crotales_GrupoH" & python main.py --image_crotal %1
