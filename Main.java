@@ -9,9 +9,8 @@ import javax.swing.ImageIcon;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        //Introducir la ruta global de la imagen del crotal
-        String image_crotal = new String("./CrotalesDB/TestSamples/0001.TIF");
-        ProcessBuilder builder = new ProcessBuilder("python main.py --image_crotal ",image_crotal);
+        //Introducir la ruta global de la imagen del crotal en el archivo main.sh
+        ProcessBuilder builder = new ProcessBuilder("bash", "main.sh");
         Process process = builder.start();
 
         InputStream stdout = process.getInputStream();
